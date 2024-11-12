@@ -28,3 +28,19 @@
     text-align: center;
     padding: 10px;
 }
+
+.section {
+    grid-area: section;
+    background-color: #f8d246;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
