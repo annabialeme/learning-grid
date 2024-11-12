@@ -2,40 +2,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: black;
 }
-
 
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto auto 1fr auto auto;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 3fr 1fr;
     grid-template-areas: 
-    "header header header"
-    "nav nav nav"
-    "section section section"
-    "aside aside aside"
-    "article article article"
-    "footer footer footer";
-    gap: 5px;
+    "header header"
+    "nav nav"
+    "section aside"
+    "article aside"
+    "footer footer";
+    padding: 1.5rem;
+    gap: 1.5rem;
     height: 100vh;
+    background-color: black;
 }
 
 .header {
     grid-area: header;
-    background-color: #4CAF50;
+    background-color: #546cd6;
     color: white;
     text-align: center;
-    padding: 20px;
+
 }
 
 .nav {
     grid-area: nav;
-    background-color: #333;
+    background-color: #55bac6;
     color: white;
     text-align: center;
-    padding: 10px;
+
 }
 
 .section {
@@ -43,29 +42,38 @@
     background-color: #f8d246;
     color: white;
     text-align: center;
-    padding: 10px;
+
 }
 
 .aside {
     grid-area: aside;
     background-color: white;
     text-align: center;
-    height: 120vh;
-    margin: 5px 5px 0 5px;
-    padding: 30px;
-    margin-left: 30px;
+
 }
 .article {
     grid-area: article;
     background-color: #ea7e61;
-    margin: 5px 5px 0 5px;
     text-align: center;
-    padding: 100px;
+
 }
 .footer {
     grid-area: footer;
-    background-color: #4CAF50;
+    background-color: #546cd6;
     color: white;
     text-align: center;
-    padding: 10px;
+
+}
+
+@media (max-width:768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "section"
+        "aside"
+        "article"
+        "footer";
+    }
 }
